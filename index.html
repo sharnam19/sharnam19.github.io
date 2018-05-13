@@ -1,0 +1,252 @@
+<html>
+	<head>
+		<title>Shharrnam Chhatpar</title>
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+	</head>
+	<style>
+		body{
+			background: #000000;
+			font-family: "Ubuntu Mono";
+			color: 	#ffffff;
+		}
+		.greenText{
+			color: #00ff00;
+			display: inline-block;
+		}
+		.cursor{
+			color: 	#ffffff;
+			display: inline-block;
+		}
+		.insert{
+			display: inline-block;
+		}
+		a,h2{
+			color:#00ff00;
+		}
+
+
+
+	</style>
+	<body>
+		<div> Use help to list all available commands </div>
+		<div><p class="greenText">snc19@Shharrnam></p><div class="insert" id="active"></div><div class="cursor">|</div></div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var active = true;
+
+		var addNew = function(){
+			$("body").append('<div><p class="greenText">snc19@Shharrnam></p><div class="insert" id="active"></div><div class="cursor">|</div></div>');
+		};
+
+		var displayLS=function(){
+			var files = ["skills.txt","projects.txt","internship.txt","awards.txt","responsibilities.txt","interests.txt","education.txt"];
+					for(file in files){
+						$("body").append('<div>'+files[file]+'</div>');		
+					}
+		};
+		var displayWhoAmI = function(){
+			var files = ["Shharrnam Chhatpar","19th January, 1996","Navi-Mumbai, India","<a href='mailto:sharnam19.nc@gmail.com'>sharnam19.nc@gmail.com</a>","<a href='https://github.com/sharnam19'>https://github.com/sharnam19</a>","<a href='https://www.linkedin.com/in/shharrnam-chhatpar-7943281a/'>https://www.linkedin.com/in/shharrnam-chhatpar-7943281a/</a>"];
+					for(file in files){
+						$("body").append('<div>'+files[file]+'</div>');		
+					}
+		};
+
+		var displaySkills = function(){
+			var skills = ["Python", "C","C++","Java","C#","Android","SQL","NoSQL","Node.js","Flask","Machine-Learning","Deep-Learning"];
+						sent = ""
+						for(skill in skills){
+							sent = sent + '\t' + skills[skill];
+						}
+						$("body").append('<h2><u>SKILLS</u></h2>')
+						$("body").append('<div>'+sent+'</div>');	
+						sent = "";
+		};
+
+		var displayEducation = function(){
+			$("body").append('<h2><u>EDUCATION</u></h2>')
+						var education = ["<h3><u>S.S.C</u></h3>","Fr.Agnel Multipurpose School & Jr.College,","2000-2012","93.09%",
+						"<h3><u>H.S.C</u></h3>","Computer Science,","Fr.Agnel Multipurpose School & Jr.College,","2012-2014","92.62%",
+						"<h3><u>Bachelor of Technology</u></h3>","Computer Engineering,","Veermata Jijabai Technological Institute,","2014-2018","GPA : 8.43 "];
+						sent = ""
+						for(ed in education){
+							$("body").append('<div>'+education[ed]+'</div>');	
+						}
+					};
+
+		var displayResponsibilities = function(){
+			$("body").append('<h2><u>RESPONSIBILITIES</u></h2>');
+						var education = ["<h3><u>Google Campus Facilitator, VJTI</u></h3>","As the Google Campus Facilitator was given the responsibility to conduct two workshops, CS With Android, aimed at teaching the juniors about use of Data Structures, Algorithms, AI in games built on Android Platform. Also had to educate them about various Google events and competitions.",
+							"<h3><u>Community of Coders, VJTI</u></h3>","Under the Inheritance Programme of Community of Coders, proactively guided a team of first year students to see their projects through completion. Also took a lecture on Basics of Java. Conducted mock interviews to provide juniors with an experience of the interview process. Also provided feedback to help them identify the areas to work on."];
+						sent = ""
+						for(ed in education){
+							$("body").append('<div>'+education[ed]+'</div>');	
+						}
+		};
+
+		var displayInterests = function(){
+			var interests = ["AI","Machine-Learning","Deep-Learning","Startups","Data-Structures","Algorithms","Automation"];
+						sent = ""
+						for(inte in interests){
+							sent = sent + '\t' + interests[inte];
+						}
+						$("body").append('<h2><u>INTERESTS</u></h2>')
+						$("body").append('<div>'+sent+'</div>');	
+						sent = "";
+		};
+
+		var displayAwards = function(){
+			$("body").append('<h2><u>AWARDS</u></h2>');
+						var awards= ["<h3><u>Winner - PWC Challenge at Hack2Innovate 2017, Pune</u></h3>",
+						"Finding Effect of News on Stock Prices of a Company. Uses sentiments from tweets to predict the Stock prices of the given company.","Symbiosis Institute of Business, Pune",
+						"<a href='https://github.com/sharnam19/StockPredictionWithSentiment'>Github Repository</a>",
+						"<h3><u>Winner - Dashview at DCB Innovation Hackathon 2017, Mumbai</u></h3>",
+						"Dashview, a system wide banking widget enabled with Speech, Keyboard, and Biometric Profile. Allows users to do any bank related task from anywhere easily without having to switch between applications.",
+						"91 Springboard, Mumbai",
+						"<a href='https://drive.google.com/open?id=13TwQq4zSn2lvu6_i5j9bNJT5oF5LIOV0'>Video</a>",
+						"<h3><u>Winner - Text and Location from Image at HackingBad 2017, Mumbai</u></h3>",
+						"An application that captures image and describes what the image is about and also where the image could have been clicked. This app can be modified to work for internal navigation in organizations. It also proves to be useful for the blind. Makes use of im2txt model and transfer learning.",
+						"Sardar Patel Institute of Technology, Mumbai",
+						"<a href='https://www.youtube.com/watch?v=2zAchCJri68'>Video</a>\t<a href='https://github.com/sharnam19/LocationWithCamera'> Github Repository</a>",
+						"<h3><u>Finalist - Dashview at ICICI Appathon 2017, Mumbai</u></h3>",
+						"Dashview, a system wide banking widget, allows users to do any bank related task from anywhere easily without having to switch between applications.",
+						"ICICI Bank, BKC, Mumbai",
+						"<a href='https://he-s3.s3.amazonaws.com/media/sprint/icici-appathon-2017/team/140713/d050f30DUGSVKMQ.mp4'>Video</a>",
+						"<h3><u>Winner - Clipper Co at Mumbai Hackathon 2017, Mumbai</u></h3>",
+						"A Multiplatform App that allows users to share clipboards between multiple devices.",
+						"Don Bosco Institute of Technology, Mumbai",
+						"<a href='https://www.youtube.com/watch?v=SMw1c34_NJA&feature=youtu.be'>Video</a>\t<a href='https://github.com/sharnam19/Clipper-Co'> Github Repository</a>",
+					
+						"<h3><u>First Runner Up - Share.info() at Flockathon 2017, Mumbai</u></h3>",
+						"A Q&A Application for FlockOS which allows Intra and Inter Organization Questions. It allows the admin to control sharing of question and answers with other organizations. Helpful Tool for Organizations with proprietary languages, tools and frameworks.",
+						"Flock, Directi, Mumbai",
+						"<a href='https://www.youtube.com/watch?v=JXmqBBGPx1E'>Video</a>",
+						];
+						sent = ""
+						for(ed in awards){
+							$("body").append('<div>'+awards[ed]+'</div>');	
+						}
+		};
+
+		var displayInternships = function(){
+			internships = ["<h3><u>Software Developer Intern - Arista Networks, Bangalore</u></h3>",
+						"15th May, 2017 - 14th July, 2017",
+						"Part of Platform Dependen Team. Was given a task of implementing a new feature for a particular ASIC.",
+						
+						"<h3><u>Software Developer Intern - YellowAnt, Bangalore</u></h3>",
+						"1st December, 2016 - 10th January, 2017",
+						"Responsible for implementing a recommender that recommends integrations of Slack to users based on the current integrations of the user & similar integrations by all the other users.",
+
+						"<h3><u>Web Developer Intern - Hookfish, Mumbai</u></h3>",
+						"1st December, 2015 - 1st January, 2016",
+						"Responsible for building multiple web pages using React.js."
+						];
+						$("body").append('<h2><u>INTERNSHIPS</u></h2>');	
+						for(ed in internships){
+							$("body").append('<div>'+internships[ed]+'</div>');	
+						}
+		};
+
+		var displayProjects = function(){
+			$("body").append('<h2><u>PROJECTS</u></h2>');	
+					projects = ["<h3><u>Lip Reading using Autoencoder and LSTM</u></h3>",
+						"A Final Year Research Project aimed at breaking the current state of the art methods on standard datasets. The project's paper is soon to be published.",
+						
+						"<h3><u>Networks - A Neural Network Library</u></h3>",
+						"This project was developed so as to get familiarity with various types of deep learning models like Convolutional Neural Network, Recurrent Neural Network, Artificial Neural Networks. Allows to build neural network without having to write any backpropagation code.",
+						"<a href='https://github.com/sharnam19/Networks'>Github Repository</a>",
+
+
+						"<h3><u>Gesture Recognition Using CNN</u></h3>",
+						"My First Deep Learning Problem using a CNN which was built from scratch using numpy. Was able to achieve 99.8% accuracy on the test set.",
+						"<a href='https://github.com/sharnam19/Gesture-Recognition-using-CNN'>Github Repository</a>",
+
+						"<h3><u>Document Classifier Using Neural Networks</u></h3>",
+						"A Neural Network model built using Numpy and Scipy which classifies a document into one of the eight classes based on the contents of the document, represented as a Bag of Words. Word Features are obtained using TF-IDF scores.",
+						"<a href='https://github.com/sharnam19/Document-Classifier-using-Neural-Network'>Github Repository</a>",
+
+
+						"<h3><u>Document Classifier Using Recurrent Neural Networks</u></h3>",
+						"A Recurrent Neural Network model built using Numpy and Scipy which classifies a document into one of the eight classes based on the contents of the document. The project was aimed at breaking the accuracy obtained using the Artificial Neural Network Approach.",
+						"<a href='https://github.com/sharnam19/Document-Classification-Using-RNN'>Github Repository</a>"
+
+						];
+						for(ed in projects){
+							$("body").append('<div>'+projects[ed]+'</div>');	
+						}
+		};
+
+		setInterval(function(){ 
+			if(active){
+				$(".cursor").css('display','none');
+				active=false;
+			}else{
+				$(".cursor").css('display','inline-block');
+				active=true;
+			} }, 500);
+		$("body").keydown(function(e) {
+   			   if (e.which == 8) {
+            		$("#active").text($("#active").text().substring(0,$("#active").text().length-1));
+      			}else if(e.which==9){
+
+      			}
+		});
+		$("body").keypress(function(event){
+			var character=String.fromCharCode(event.which);
+			if((character>='a' && character<='z') || event.which==32 || event.which==46 || (character>='A' && character<='Z')){
+				$("#active").text($("#active").text()+character);
+			}
+			else if(event.which==13){
+				insertedText = $("#active").text();
+				$(".insert").removeAttr("id");
+				$(".cursor").css("display","none");
+				$(".cursor").removeAttr("class");
+				insertedText = insertedText.trim().toLowerCase();
+				if(insertedText=="help"){
+					var commands = ["all","ls","cat","whoami","help"];
+					for(command in commands){
+						$("body").append('<div>'+command+'] '+commands[command]+'</div>');		
+					}
+					addNew();
+				}else if(insertedText == "ls"){
+					displayLS();
+					addNew();
+				}else if(insertedText == "whoami"){
+					displayWhoAmI();
+					addNew();
+				}else if(insertedText == "all"){
+					displayWhoAmI();
+					displayAwards();
+					displayProjects();
+					displayInternships();
+					displayResponsibilities();
+					displaySkills();
+					displayInterests();
+					displayEducation();
+					addNew();
+				}else if(insertedText.startsWith("cat")){
+					var file = insertedText.split(" ")[1];
+					if(file == "skills.txt"){
+						displaySkills();
+					}else if(file == "education.txt"){
+						displayEducation();
+					}else if(file == "responsibilities.txt"){
+						displayResponsibilities();
+					}else if(file == "interests.txt"){
+						displayInterests();
+					}else if(file == "awards.txt"){
+						displayAwards();
+					}else if(file == "internships.txt"){
+						displayInternships();
+					}else if(file == "projects.txt"){
+						displayProjects();
+					}
+					addNew();
+				}else{
+					$("body").append('<div> Command Not Found </div>');
+					addNew();			
+				}
+		}});
+
+	</script>
+</html>
