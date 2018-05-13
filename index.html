@@ -41,9 +41,15 @@
 
 		var displayLS=function(){
 			var files = ["skills.txt","projects.txt","internship.txt","awards.txt","responsibilities.txt","interests.txt","education.txt"];
-					for(file in files){
-						$("body").append('<div>'+files[file]+'</div>');		
-					}
+					// for(file in files){
+					// 	$("body").append('<div>'+files[file]+'</div>');		
+					// }
+					sent = ""
+						for(file in files){
+							sent = sent + '\t' + files[file];
+						}
+						$("body").append('<div>'+sent+'</div>');	
+						sent = "";
 		};
 		var displayWhoAmI = function(){
 			var files = ["Shharrnam Chhatpar","19th January, 1996","Navi-Mumbai, India","<a href='mailto:sharnam19.nc@gmail.com'>sharnam19.nc@gmail.com</a>","<a href='https://github.com/sharnam19'>https://github.com/sharnam19</a>","<a href='https://www.linkedin.com/in/shharrnam-chhatpar-7943281a/'>https://www.linkedin.com/in/shharrnam-chhatpar-7943281a/</a>"];
@@ -203,7 +209,7 @@
 				$(".cursor").removeAttr("class");
 				insertedText = insertedText.trim().toLowerCase();
 				if(insertedText=="help"){
-					var commands = ["all","ls","cat","whoami","help"];
+					var commands = ["all","whoami","ls","cat","help"];
 					for(command in commands){
 						$("body").append('<div>'+command+'] '+commands[command]+'</div>');		
 					}
