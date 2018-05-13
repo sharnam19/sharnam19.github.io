@@ -28,7 +28,7 @@
 
 	</style>
 	<body>
-		<div> Use help to list all available commands </div>
+		<div> If you don't know how to proceed, type in help. I'm really helpful :p </div>
 		<div><p class="greenText">snc19@Shharrnam></p><div class="insert" id="active"></div><div class="cursor">|</div></div>
 	</body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -51,6 +51,11 @@
 						$("body").append('<div>'+sent+'</div>');	
 						sent = "";
 		};
+
+		var clear = function(){
+			$("body").html('<div> If you don\'t know how to proceed, type in help. I\'m really helpful :p </div><div><p class="greenText">snc19@Shharrnam></p><div class="insert" id="active"></div><div class="cursor">|</div></div>');
+		};
+
 		var displayWhoAmI = function(){
 			var files = ["Shharrnam Chhatpar","19th January, 1996","Navi-Mumbai, India","<a href='mailto:sharnam19.nc@gmail.com'>sharnam19.nc@gmail.com</a>","<a href='https://github.com/sharnam19'>https://github.com/sharnam19</a>","<a href='https://www.linkedin.com/in/shharrnam-chhatpar-7943281a/'>https://www.linkedin.com/in/shharrnam-chhatpar-7943281a/</a>"];
 					for(file in files){
@@ -209,7 +214,7 @@
 				$(".cursor").removeAttr("class");
 				insertedText = insertedText.trim().toLowerCase();
 				if(insertedText=="help"){
-					var commands = ["all","whoami","ls","cat","help"];
+					var commands = ["all","whoami","ls","cat","clear","help"];
 					for(command in commands){
 						$("body").append('<div>'+command+'] '+commands[command]+'</div>');		
 					}
@@ -248,6 +253,8 @@
 						displayProjects();
 					}
 					addNew();
+				}else if(insertedText == "clear"){
+					clear();
 				}else{
 					$("body").append('<div> Command Not Found </div>');
 					addNew();			
