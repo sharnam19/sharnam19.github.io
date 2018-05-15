@@ -23,11 +23,16 @@
 		a,h2{
 			color:#00ff00;
 		}
+		#hidden_input{
+			visibility: none;
+			display: none;
+		}
 
 
 
 	</style>
 	<body>
+		<input id="hidden_input"/>
 		<div> If you don't know how to proceed, type in help. I'm really helpful :p </div>
 		<div><p class="greenText">snc19@Shharrnam></p><div class="insert" id="active"></div><div class="cursor">|</div></div>
 	</body>
@@ -42,13 +47,13 @@
 		var displayLS=function(){
 			var files = ["skills.txt","projects.txt","internship.txt","awards.txt","responsibilities.txt","interests.txt","education.txt"];
 					// for(file in files){
-					// 	$("body").append('<div>'+files[file]+'</div>');		
+					// 	$("body").append('<div>'+files[file]+'</div>');
 					// }
 					sent = ""
 						for(file in files){
 							sent = sent + '\t' + files[file];
 						}
-						$("body").append('<div>'+sent+'</div>');	
+						$("body").append('<div>'+sent+'</div>');
 						sent = "";
 		};
 
@@ -59,7 +64,7 @@
 		var displayWhoAmI = function(){
 			var files = ["Shharrnam Chhatpar","19th January, 1996","Navi-Mumbai, India","<a href='mailto:sharnam19.nc@gmail.com'>sharnam19.nc@gmail.com</a>","<a href='https://github.com/sharnam19'>https://github.com/sharnam19</a>","<a href='https://www.linkedin.com/in/shharrnam-chhatpar-7943281a/'>https://www.linkedin.com/in/shharrnam-chhatpar-7943281a/</a>"];
 					for(file in files){
-						$("body").append('<div>'+files[file]+'</div>');		
+						$("body").append('<div>'+files[file]+'</div>');
 					}
 		};
 
@@ -70,7 +75,7 @@
 							sent = sent + '\t' + skills[skill];
 						}
 						$("body").append('<h2><u>SKILLS</u></h2>')
-						$("body").append('<div>'+sent+'</div>');	
+						$("body").append('<div>'+sent+'</div>');
 						sent = "";
 		};
 
@@ -81,7 +86,7 @@
 						"<h3><u>Bachelor of Technology</u></h3>","Computer Engineering,","Veermata Jijabai Technological Institute,","2014-2018","GPA : 8.43 "];
 						sent = ""
 						for(ed in education){
-							$("body").append('<div>'+education[ed]+'</div>');	
+							$("body").append('<div>'+education[ed]+'</div>');
 						}
 					};
 
@@ -91,7 +96,7 @@
 							"<h3><u>Community of Coders, VJTI</u></h3>","Under the Inheritance Programme of Community of Coders, proactively guided a team of first year students to see their projects through completion. Also took a lecture on Basics of Java. Conducted mock interviews to provide juniors with an experience of the interview process. Also provided feedback to help them identify the areas to work on."];
 						sent = ""
 						for(ed in education){
-							$("body").append('<div>'+education[ed]+'</div>');	
+							$("body").append('<div>'+education[ed]+'</div>');
 						}
 		};
 
@@ -102,7 +107,7 @@
 							sent = sent + '\t' + interests[inte];
 						}
 						$("body").append('<h2><u>INTERESTS</u></h2>')
-						$("body").append('<div>'+sent+'</div>');	
+						$("body").append('<div>'+sent+'</div>');
 						sent = "";
 		};
 
@@ -127,7 +132,7 @@
 						"A Multiplatform App that allows users to share clipboards between multiple devices.",
 						"Don Bosco Institute of Technology, Mumbai",
 						"<a href='https://www.youtube.com/watch?v=SMw1c34_NJA&feature=youtu.be'>Video</a>\t<a href='https://github.com/sharnam19/Clipper-Co'> Github Repository</a>",
-					
+
 						"<h3><u>First Runner Up - Share.info() at Flockathon 2017, Mumbai</u></h3>",
 						"A Q&A Application for FlockOS which allows Intra and Inter Organization Questions. It allows the admin to control sharing of question and answers with other organizations. Helpful Tool for Organizations with proprietary languages, tools and frameworks.",
 						"Flock, Directi, Mumbai",
@@ -135,7 +140,7 @@
 						];
 						sent = ""
 						for(ed in awards){
-							$("body").append('<div>'+awards[ed]+'</div>');	
+							$("body").append('<div>'+awards[ed]+'</div>');
 						}
 		};
 
@@ -143,7 +148,7 @@
 			internships = ["<h3><u>Software Developer Intern - Arista Networks, Bangalore</u></h3>",
 						"15th May, 2017 - 14th July, 2017",
 						"Part of Platform Dependen Team. Was given a task of implementing a new feature for a particular ASIC.",
-						
+
 						"<h3><u>Software Developer Intern - YellowAnt, Bangalore</u></h3>",
 						"1st December, 2016 - 10th January, 2017",
 						"Responsible for implementing a recommender that recommends integrations of Slack to users based on the current integrations of the user & similar integrations by all the other users.",
@@ -152,17 +157,17 @@
 						"1st December, 2015 - 1st January, 2016",
 						"Responsible for building multiple web pages using React.js."
 						];
-						$("body").append('<h2><u>INTERNSHIPS</u></h2>');	
+						$("body").append('<h2><u>INTERNSHIPS</u></h2>');
 						for(ed in internships){
-							$("body").append('<div>'+internships[ed]+'</div>');	
+							$("body").append('<div>'+internships[ed]+'</div>');
 						}
 		};
 
 		var displayProjects = function(){
-			$("body").append('<h2><u>PROJECTS</u></h2>');	
+			$("body").append('<h2><u>PROJECTS</u></h2>');
 					projects = ["<h3><u>Lip Reading using Autoencoder and LSTM</u></h3>",
 						"A Final Year Research Project aimed at breaking the current state of the art methods on standard datasets. The project's paper is soon to be published.",
-						
+
 						"<h3><u>Networks - A Neural Network Library</u></h3>",
 						"This project was developed so as to get familiarity with various types of deep learning models like Convolutional Neural Network, Recurrent Neural Network, Artificial Neural Networks. Allows to build neural network without having to write any backpropagation code.",
 						"<a href='https://github.com/sharnam19/Networks'>Github Repository</a>",
@@ -183,11 +188,11 @@
 
 						];
 						for(ed in projects){
-							$("body").append('<div>'+projects[ed]+'</div>');	
+							$("body").append('<div>'+projects[ed]+'</div>');
 						}
 		};
-
-		setInterval(function(){ 
+		$("#hidden_input").focus();
+		setInterval(function(){
 			if(active){
 				$(".cursor").css('display','none');
 				active=false;
@@ -216,7 +221,7 @@
 				if(insertedText=="help"){
 					var commands = ["all","whoami","ls","cat","clear","help"];
 					for(command in commands){
-						$("body").append('<div>'+command+'] '+commands[command]+'</div>');		
+						$("body").append('<div>'+command+'] '+commands[command]+'</div>');
 					}
 					addNew();
 				}else if(insertedText == "ls"){
@@ -257,7 +262,7 @@
 					clear();
 				}else{
 					$("body").append('<div> Command Not Found </div>');
-					addNew();			
+					addNew();
 				}
 		}});
 
