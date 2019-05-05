@@ -37,7 +37,7 @@
 		};
 
 		var displayLS=function(){
-			var files = ["skills.txt","projects.txt","internship.txt","awards.txt","responsibilities.txt","interests.txt","education.txt"];
+			var files = ["skills.txt","projects.txt","experience.txt","awards.txt","responsibilities.txt","interests.txt","education.txt"];
 					// for(file in files){
 					// 	$("body").append('<div>'+files[file]+'</div>');
 					// }
@@ -75,7 +75,7 @@
 			$("body").append('<h2><u>EDUCATION</u></h2>')
 						var education = ["<h3><u>S.S.C</u></h3>","Fr.Agnel Multipurpose School & Jr.College,","2000-2012","93.09%",
 						"<h3><u>H.S.C</u></h3>","Computer Science,","Fr.Agnel Multipurpose School & Jr.College,","2012-2014","92.62%",
-						"<h3><u>Bachelor of Technology</u></h3>","Computer Engineering,","Veermata Jijabai Technological Institute,","2014-2018","GPA : 8.43 "];
+						"<h3><u>Bachelor of Technology</u></h3>","Computer Engineering,","Veermata Jijabai Technological Institute,","2014-2018","GPA : 8.37 "];
 						sent = ""
 						for(ed in education){
 							$("body").append('<div>'+education[ed]+'</div>');
@@ -137,9 +137,12 @@
 		};
 
 		var displayInternships = function(){
-			internships = ["<h3><u>Software Developer Intern - Arista Networks, Bangalore</u></h3>",
+			internships = ["<h3><u>Software Engineer - Arista Networks, Bangalore</u></h3>",
+						"2nd July, 2018 - Present",
+						"Responsible for complete system design and implementation of projects from scratch. I work in the Quality of Service area to see to it that the packets are processed as desired by the system.",
+				       "<h3><u>Software Engineer Intern - Arista Networks, Bangalore</u></h3>",
 						"15th May, 2017 - 14th July, 2017",
-						"Part of Platform Dependen Team. Was given a task of implementing a new feature for a particular ASIC.",
+						"Part of Platform Dependenent Team. Was given a task of implementing a new feature for a particular ASIC.",
 
 						"<h3><u>Software Developer Intern - YellowAnt, Bangalore</u></h3>",
 						"1st December, 2016 - 10th January, 2017",
@@ -149,7 +152,7 @@
 						"1st December, 2015 - 1st January, 2016",
 						"Responsible for building multiple web pages using React.js."
 						];
-						$("body").append('<h2><u>INTERNSHIPS</u></h2>');
+						$("body").append('<h2><u>Experience</u></h2>');
 						for(ed in internships){
 							$("body").append('<div>'+internships[ed]+'</div>');
 						}
@@ -247,7 +250,7 @@
 						displayInterests();
 					}else if(file == "awards.txt"){
 						displayAwards();
-					}else if(file == "internships.txt"){
+					}else if(file == "experience.txt"){
 						displayInternships();
 					}else if(file == "projects.txt"){
 						displayProjects();
